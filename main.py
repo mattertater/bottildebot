@@ -4,8 +4,8 @@ from telegram.ext import Updater
 from telegram.ext import CommandHandler
 import telegram, logging, datetime, schedule, time
 
-bot = telegram.bot(token='568352615:AAEGpAfoFY1994WDGQRZm7TcHDNeP0WU8_M')
-updater = Updater(token='568352615:AAEGpAfoFY1994WDGQRZm7TcHDNeP0WU8_M')
+bot = telegram.bot(token='token')
+updater = Updater(token='token')
 dispatcher = updater.dispatcher
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
