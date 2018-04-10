@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 
+import telegram, logging, datetime, schedule, time
 from telegram.ext import Updater
 from telegram.ext import CommandHandler
-import telegram, logging, datetime, schedule, time
 
-bot = telegram.bot(token='token')
 updater = Updater(token='token')
 dispatcher = updater.dispatcher
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -17,9 +16,8 @@ def good_morning():
 
 def hey(bot, update):
     bot.send_message(chat_id=update.message.chat_id, text="hey")
-
-schedule.every().day.at("00:00").do(after_dark(), "midnight name change")
-schedule.every().day.at("07:00").do(good_morning(), "morning name change")
+    schedule.every().day.at("00:00").do(after_dark)
+    schedule.every().day.at("07:00").do(good_morning)
 
 start_handler = CommandHandler('hey', hey)
 dispatcher.add_handler(start_handler)
