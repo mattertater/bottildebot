@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
-
 import telegram, logging, datetime, schedule, time
 from telegram.ext import Updater
 from telegram.ext import CommandHandler
 
-updater = Updater(token='token')
+updater = Updater(token='568352615:AAEGpAfoFY1994WDGQRZm7TcHDNeP0WU8_M')
 dispatcher = updater.dispatcher
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
